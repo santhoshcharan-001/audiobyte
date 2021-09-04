@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="{% static 'images/audiobyte_logo.png'%}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stylish&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiobyte</title>
+  </head>
+  <body>
+    <div class="loading">
+      <img src="{% static 'images/loading.svg'%}" alt="" />
+    </div>
+    <nav>
+      <div class="image-holder">
+        <a href="/"
+          ><img src="{% static 'images/audiobyte_logo.png'%}" alt=""
+        /></a>
+      </div>
+      <div class="search-bar">
+        <form action="/" method="post">
+          {% csrf_token %}
+          <input
+            type="text"
+            name="song-name"
+            id="song-name"
+            placeholder="Search"
+            autocomplete="off"
+          />
+          <button type="submit">
+            <img src="{% static 'images/search.svg'%}" alt="" />
+          </button>
+          <div class="suggestions hide">
+            <div class="suggestion hide" onclick="get_recommendations($(this))">
+              <h1>Hello</h1>
+            </div>
+          </div>
+          <div class="recommendations hide">
+            <div class="song hide" onclick="set_song($(this))">
+              <div class="thumbnail">
+                <img src="" alt="" />
+              </div>
+              <div class="title">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="santhosh">
+        <p>
+          Made by
+          <a href="https://github.com/santhoshcharan-001" target="_blank">
+            Murarishetty</a
+          >
+        </p>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="player">
+        <div class="thumbnail-holder">
+          <img src="{% static 'images/nosong.png'%}" alt="" />
+        </div>
+        <div class="controls">
+          <h1></h1>
+          <audio id="high" src="" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <script src="{%static 'javascript/home.js'%}"></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.loading {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-family: "Stylish", sans-serif;
+  background-color: bisque;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  background-color: #fff;
+  display: grid;
+  /* background-color: #eee; */
+  align-items: center;
+  /* grid-template-columns: 100px 1fr 180px; */
+  grid-template-columns: 2fr 8fr 3fr;
+  width: 100%;
+  justify-content: center;
+  height: 80px;
+}
+
+.image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-holder img {
+  height: 70px;
+  width: 127px;
+}
+.search-bar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  border: 1px solid #eee;
+  box-shadow: inset 0 1px 4px #eee;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-bar form input {
+  width: 100%;
+  flex: 1;
+  margin-left: 5px;
+  border: 0px;
+  padding: 3px 7px;
+  background-color: #eee;
+  outline: 0;
+  color: #98229e;
+  font-size: 20px;
+  font-family: inherit;
+}
+.search-bar img {
+  width: 25px;
+}
+.search-bar form button {
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  margin-left: 5px;
+  border: 0;
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+.santhosh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.santhosh p {
+  font-size: 20px;
+}
+.santhosh p a {
+  color: #98229e;
+}
+.suggestions {
+  position: absolute;
+  width: 100%;
+  top: 62px;
+  height: 250px;
+  background-color: #fff;
+  overflow: auto;
+}
+.recommendations {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  top: 62px;
+  height: 300px;
+  overflow: auto;
+}
+.suggestion {
+  cursor: pointer;
+
+  padding: 0.2rem 1rem;
+}
+.suggestion:hover {
+  background-color: #eee;
+}
+.hide {
+  display: none !important;
+}
+.active {
+  display: block !important;
+}
+.song {
+  display: grid;
+  width: 100%;
+  padding: 0.6rem 0;
+  align-items: center;
+  border-bottom: 2px solid black;
+  grid-template-columns: 200px 1fr;
+}
+.song div {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.thumbnail img {
+  width: 100%;
+}
+.main {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+.player {
+  border: 0;
+  outline: 0;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  overflow: hidden;
+  border-radius: 5px;
+  width: 400px;
+}
+.thumbnail-holder {
+  width: 100%;
+  line-height: 0px;
+}
+.thumbnail-holder img {
+  width: 100%;
+}
+.controls {
+  background-color: #fff;
+  padding: 1rem 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
