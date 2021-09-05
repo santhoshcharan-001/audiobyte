@@ -162,6 +162,7 @@ form {
 .thumbnail-holder img {
   width: 100%;
   height:230px;
+  -webkit-user-drag: none;
 }
 .controls {
   background-color: #fff;
